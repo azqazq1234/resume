@@ -4,7 +4,7 @@ import { Button } from 'antd';
 function App() {
     return (
         <div>
-            <Button type={'primary'}>Primary</Button>
+            <Button type={'primary'}>按钮</Button>
         </div>
     );
 }
