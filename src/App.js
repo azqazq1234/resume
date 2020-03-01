@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
-import {Row, Col} from 'antd';
+import {Row, Col, Progress} from 'antd';
 import {DownOutlined} from '@ant-design/icons';
+import 'animate.css';
 
 import usst from './logo/usst.jpg';
 import tuc from './logo/tuc.jpg';
@@ -12,6 +13,14 @@ import nikePPT from './ducument/nike case.pptx';
 
 function App() {
     const [count, setCount] = useState();
+
+    const skill = [
+        {name: 'Deutsche', cName: '德语', value: 4},
+        {name: 'CET6', cName: '英语6级', value: 6},
+        {name: 'PPT', cName: '幻灯片制作', value: 6},
+        {name: 'WebFrontend', cName: '网页制作', value: 8},
+        {name: 'photography', cName: '摄像', value: 7},
+    ];
 
     return (
         <ReactFullpage
@@ -42,10 +51,10 @@ function App() {
                         <div className={'section'} style={{backgroundColor: count === 2 ? '#9f3' : 'rgb(20, 20, 20)', transition: '0.5s'}}>
                             <Row style={{height: '60vh'}}>
                                 <Col span={12}>
-                                   <div onClick={() => {window.open(`${nikePPT}`)}} style={{background: `url(${nike}) no-repeat center`, backgroundSize: '16rem 16rem',
-                                       height: '16rem', width: '16rem', border: '0.5rem solid #FF7F50', borderRadius: '5rem', cursor: 'pointer',
-                                       position: 'absolute', top: '70%', left: '50%', transform: 'translate(-50%, -70%)'}}
-                                   />
+                                    <div onClick={() => {window.open(`${nikePPT}`)}} style={{background: `url(${nike}) no-repeat center`, backgroundSize: '16rem 16rem',
+                                        height: '16rem', width: '16rem', border: '0.5rem solid #FF7F50', borderRadius: '5rem', cursor: 'pointer',
+                                        position: 'absolute', top: '70%', left: '50%', transform: 'translate(-50%, -70%)'}}
+                                    />
                                 </Col>
                                 <Col span={12}>
                                     <div onClick={() => {window.open('https://azqazq1234.github.io/love/')}} style={{background: `url(${love}) no-repeat center`, backgroundSize: '16rem 16rem',
@@ -113,15 +122,56 @@ function App() {
                                     </Row>
                                 </Col>
                             </Row>
+                            <DownOutlined onClick={() => {fullpageApi.moveSectionDown()}} style={{position: 'absolute', bottom: '2rem', width: '100%', clear: 'both', display: 'block', fontSize: '2rem', color: 'white'}} />
                         </div>
 
-                        {/*<div className={'section'} style={{backgroundColor: count === 4 ? '#9f3' : '#22c3aa', transition: '0.5s'}}>*/}
-                        {/*    <p>skill</p>*/}
-                        {/*</div>*/}
+                        {/*skill*/}
+                        <div className={'section'} style={{backgroundColor: count === 4 ? '#9f3' : 'rgb(20, 20, 20)', transition: '0.5s'}}>
+                            <Row align={'middle'} style={{height: '70vh'}}>
+                                <Col span={24}>
+                                    {
+                                        skill.map((v) => {
+                                            return (
+                                                <Row align={'middle'} style={{margin: '1.5rem 0'}}>
+                                                    <Col span={6} offset={5}>
+                                                        <p style={{color: '#FF8C00', fontSize: '2rem', fontWeight: '500', float: 'right', margin: '0'}}>{v.name}·
+                                                            <span style={{fontSize: '1.5rem'}}>{v.cName}</span>
+                                                        </p>
+                                                    </Col>
+                                                    <Col span={8}>
+                                                        <div style={{marginLeft: '2rem'}}>
+                                                            {[...Array(10)].map((w, i) => {
+                                                                return (
+                                                                    <div style={{width: '0.7rem', height: '0.7rem', backgroundColor: i < v.value ? '#FF8C00' : 'white', transform: 'skewX(-10deg)', display: 'inline-block', margin: '0 0.7rem'}} />
+                                                                )
+                                                            })}
+                                                        </div>
+                                                    </Col>
+                                                </Row>
+                                            )
+                                        })
+                                    }
+                                </Col>
+                            </Row>
 
-                        {/*<div className={'section'} style={{backgroundColor: count === 4 ? '#9f3' : '#22c3aa', transition: '0.5s'}}>*/}
-                        {/*    <p>end</p>*/}
-                        {/*</div>*/}
+                            <div style={{height: '30vh'}}>
+                                <p style={{color: 'whiteSmoke', fontSize: '4rem', textAlign: 'center', fontWeight: '100', position: 'absolute', bottom: '0', width: '100%', clear: 'both', display: 'block', }}>
+                                    Skill
+                                    <span style={{fontSize: '2rem'}}>s</span>
+                                    <span style={{margin: '0 0 0 0.5rem'}}>above</span>
+                                </p>
+                            </div>
+                            <DownOutlined onClick={() => {fullpageApi.moveSectionDown()}} style={{position: 'absolute', bottom: '2rem', width: '100%', clear: 'both', display: 'block', fontSize: '2rem', color: 'white'}} />
+                        </div>
+
+                        {/*end*/}
+                        <div className={'section'} style={{backgroundColor: count === 5 ? '#9f3' : 'rgb(20, 20, 20)', transition: '0.5s'}}>
+                            <div style={{textAlign: 'center'}}>
+                                <p className={count === 4 ? 'animated bounce' : null} style={{color: 'whiteSmoke', fontSize: '6rem', fontWeight: '200', margin: '0'}}>Thank You!</p>
+                                <p className={count === 4 ? 'animated fadeIn delay-1s slower' : null} style={{color: 'whiteSmoke', fontSize: '1.8rem', fontWeight: '200', margin: '0', transition: 'opacity 2s linear'}}>for watching this</p>
+                                <p className={count === 4 ? 'animated fadeIn delay-3s slower' : null} style={{color: 'whiteSmoke', fontSize: '1.8rem', fontWeight: '200', margin: '0'}}>and extremely expecting for your reply</p>
+                            </div>
+                        </div>
                     </ReactFullpage.Wrapper>
                 );
             }}
