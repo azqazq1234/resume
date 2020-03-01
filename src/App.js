@@ -4,6 +4,8 @@ import {Row, Col, Progress} from 'antd';
 import {DownOutlined} from '@ant-design/icons';
 import 'animate.css';
 
+import madailogo from './logo/madailogo.jpg';
+import emclogo from './logo/emclogo.jpg';
 import usst from './logo/usst.jpg';
 import tuc from './logo/tuc.jpg';
 import nike from './logo/nike.jpg';
@@ -36,15 +38,66 @@ function App() {
                         <div className={'section'} style={{backgroundColor: count === 0 ? '#9f3' : 'rgb(20, 20, 20)', transition: '0.5s'}}>
                             <div style={{textAlign: 'center'}}>
                                 <p style={{color: 'whiteSmoke', fontSize: '6rem', margin: '0', fontWeight: '200'}}>Hello</p>
-                                <p style={{color: '#aee2d9', fontSize: '1.3rem', margin: '0.5rem', fontWeight: '200'}}>思路天马行空，执着死抠细节，追逐一切美好紧致的东西</p>
+                                <p style={{color: '#aee2d9', fontSize: '1.3rem', margin: '0.5rem', fontWeight: '200'}}>思路天马行空，执着死抠细节，追逐一切美好精致的东西</p>
                                 <p style={{color: 'white', fontSize: '1.5rem', margin: '0.5rem', fontWeight: '300'}}>我是周立桦，也可以叫我哈维</p>
                                 <p style={{color: 'white', fontSize: '1.3rem', margin: '0.5rem', fontWeight: '200'}}>A preStrategy</p>
                                 <DownOutlined onClick={() => {fullpageApi.moveSectionDown()}} style={{position: 'absolute', bottom: '2rem', width: '100%', clear: 'both', display: 'block', fontSize: '2rem', color: 'white'}} />
                             </div>
                         </div>
 
-                        <div className={'section'} style={{backgroundColor: count === 1 ? '#9f3' : '#22c3aa', transition: '0.5s'}}>
-                            <p>experience</p>
+                        <div className={'section'} style={{backgroundColor: count === 1 ? '#9f3' : 'rgb(20, 20, 20)', transition: '0.5s'}}>
+                            <Row style={{height: '100vh'}}>
+                                <Col span={8}>
+                                    <Row align={'middle'} style={{height: '100vh'}}>
+                                        <Col span={24}>
+                                            <p style={{textAlign: 'center', color: 'whiteSmoke', fontSize: '4rem', fontWeight: '100'}}>Experience</p>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col span={16}>
+                                    <Row align={'middle'} style={{height: '45vh'}}>
+                                        <Col span={18}>
+                                            <p style={{color: 'white', fontSize: '2rem', margin: '0 0 0 1rem', fontWeight: '300'}}>
+                                                麻袋财富
+                                                <span style={{fontSize: '1rem', margin: '0 0 0 0.5rem', fontWeight: '300'}}>前端交互工程师</span>
+                                            </p>
+                                            <p style={{color: 'white', fontSize: '1rem', margin: '1rem 0 1rem 1rem', fontWeight: '300'}}>
+                                                1.展招CRM移动销售业务管理项目前端视觉开发，目前企业内部用户数4000+，内部用户日均PV 20K+
+                                            </p>
+                                            <p style={{color: 'white', fontSize: '1rem', margin: '1rem 0 1rem 1rem', fontWeight: '300'}}>
+                                                2.渠道商管理项目前端视觉开发，为渠道商更快更好处理相关业务提供帮助
+                                            </p>
+                                            <p style={{color: 'white', fontSize: '1rem', margin: '1rem 0 1rem 1rem', fontWeight: '300'}}>
+                                                3.开发维护展招后台管理，客户中心管理，移动催收等多个前端查询管理界面为公司相关业务开展调用提供方便
+                                            </p>
+                                        </Col>
+                                        <Col span={6}>
+                                            <img src={madailogo} alt={'madailogo'} width={'70%'} style={{margin: '0 0 0 1rem'}} />
+                                        </Col>
+                                    </Row>
+                                    <Row align={'middle'} style={{height: '45vh'}}>
+                                        <Col span={18}>
+                                            <p style={{color: 'white', fontSize: '2rem', margin: '0 0 0 1rem', fontWeight: '300'}}>
+                                                EMC中国研发中心
+                                                <span style={{fontSize: '1rem', margin: '0 0 0 0.5rem', fontWeight: '300'}}>前端视觉工程师</span>
+                                            </p>
+                                            <p style={{color: 'white', fontSize: '1rem', margin: '1rem 0 1rem 1rem', fontWeight: '300'}}>
+                                                1.为公司内部使用的OpenStack云计算服务开发交互管理界面，使用基于angular技术的响应式开放框架快速部署提升使用体验，增进部署效率
+                                            </p>
+                                            <p style={{color: 'white', fontSize: '1rem', margin: '1rem 0 1rem 1rem', fontWeight: '300'}}>
+                                                2.为CloudFoundry云平台集成环境提供交互管理界面，改进操作步骤和交互方式并简化大量重复批处理操作，提升工作效率
+                                            </p>
+                                            <p style={{color: 'white', fontSize: '1rem', margin: '1rem 0 1rem 1rem', fontWeight: '300'}}>
+                                                3.重构原emc技术专利管理项目，使用angular替换原有老旧非响应式布局页面，扁平化显示风格，极简操作流程，提升展示效果
+                                            </p>
+                                        </Col>
+                                        <Col span={6}>
+                                            <img src={emclogo} alt={'emclogo'} width={'70%'} style={{margin: '0 0 0 1rem'}} />
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                            <DownOutlined onClick={() => {fullpageApi.moveSectionDown()}} style={{position: 'absolute', bottom: '2rem', width: '100%', clear: 'both', display: 'block', fontSize: '2rem', color: 'white'}} />
                         </div>
 
                         {/*case*/}
@@ -94,29 +147,29 @@ function App() {
                                     </Row>
                                 </Col>
                                 <Col span={16}>
-                                    <Row align={'middle'} style={{height: '50vh'}}>
-                                        <Col span={20}>
-                                            <p style={{color: 'white', fontSize: '2rem', margin: '0 0 0 5rem', fontWeight: '300'}}>
+                                    <Row align={'middle'} style={{height: '45vh'}}>
+                                        <Col span={18}>
+                                            <p style={{color: 'white', fontSize: '2rem', margin: '0 0 0 1rem', fontWeight: '300'}}>
                                                 上海理工大学
                                                 <span style={{fontSize: '1rem', margin: '0 0 0 0.5rem', fontWeight: '200'}}>University of Shanghai for Science and Technology</span>
                                             </p>
-                                            <p style={{color: 'white', fontSize: '1.4rem', margin: '0 0 0 5rem', fontWeight: '300'}}>光电信息与计算机工程学院 | 光电信息工程</p>
-                                            <p style={{color: 'white', fontSize: '1rem', margin: '0 0 0 5rem', fontWeight: '200'}}>College of opto-electronics & computer engineering | Opto-electronics engineering</p>
+                                            <p style={{color: 'white', fontSize: '1.4rem', margin: '0 0 0 1rem', fontWeight: '300'}}>光电信息与计算机工程学院 | 光电信息工程</p>
+                                            <p style={{color: 'white', fontSize: '1rem', margin: '0 0 0 1rem', fontWeight: '200'}}>College of opto-electronics & computer engineering | Opto-electronics engineering</p>
                                         </Col>
-                                        <Col span={4}>
+                                        <Col span={6}>
                                             <img src={usst} alt={'usst'} width={'50%'} />
                                         </Col>
                                     </Row>
-                                    <Row align={'middle'} style={{height: '50vh'}}>
-                                        <Col span={20}>
-                                            <p style={{color: 'white', fontSize: '2rem', margin: '0 0 0 5rem', fontWeight: '300'}}>
+                                    <Row align={'middle'} style={{height: '45vh'}}>
+                                        <Col span={18}>
+                                            <p style={{color: 'white', fontSize: '2rem', margin: '0 0 0 1rem', fontWeight: '300'}}>
                                                 开姆尼茨工业大学
                                                 <span style={{fontSize: '1rem', margin: '0 0 0 0.5rem', fontWeight: '200'}}>Technische Universitat Chemnitz</span>
                                             </p>
-                                            <p style={{color: 'white', fontSize: '1.4rem', margin: '0 0 0 5rem', fontWeight: '300'}}>电子工程和信息技术学院 | 微电子预科</p>
-                                            <p style={{color: 'white', fontSize: '1rem', margin: '0 0 0 5rem', fontWeight: '200'}}>College of electrical engineering and information technology | Microeconomics</p>
+                                            <p style={{color: 'white', fontSize: '1.4rem', margin: '0 0 0 1rem', fontWeight: '300'}}>电子工程和信息技术学院 | 微电子预科</p>
+                                            <p style={{color: 'white', fontSize: '1rem', margin: '0 0 0 1rem', fontWeight: '200'}}>College of electrical engineering and information technology | Microeconomics</p>
                                         </Col>
-                                        <Col span={4}>
+                                        <Col span={6}>
                                             <img src={tuc} alt={'tuc'} width={'50%'} />
                                         </Col>
                                     </Row>
