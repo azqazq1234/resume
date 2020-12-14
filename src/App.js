@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
-import {Row, Col, Progress} from 'antd';
+import {Row, Col} from 'antd';
 import {DownOutlined} from '@ant-design/icons';
 import 'animate.css';
 
@@ -11,7 +11,6 @@ import tuc from './logo/tuc.jpg';
 import nike from './logo/nike.jpg';
 import love from './logo/love.jpg';
 import nikePPT from './ducument/nike case.pptx';
-
 
 function App() {
     const [count, setCount] = useState();
@@ -183,9 +182,9 @@ function App() {
                             <Row align={'middle'} style={{height: '70vh'}}>
                                 <Col span={24}>
                                     {
-                                        skill.map((v) => {
+                                        skill.map((v, i) => {
                                             return (
-                                                <Row align={'middle'} style={{margin: '1.5rem 0'}}>
+                                                <Row key={i} align={'middle'} style={{margin: '1.5rem 0'}}>
                                                     <Col span={6} offset={5}>
                                                         <p style={{color: '#FF8C00', fontSize: '2rem', fontWeight: '500', float: 'right', margin: '0'}}>{v.name}·
                                                             <span style={{fontSize: '1.5rem'}}>{v.cName}</span>
@@ -195,7 +194,7 @@ function App() {
                                                         <div style={{marginLeft: '2rem'}}>
                                                             {[...Array(10)].map((w, i) => {
                                                                 return (
-                                                                    <div style={{width: '0.7rem', height: '0.7rem', backgroundColor: i < v.value ? '#FF8C00' : 'white', transform: 'skewX(-10deg)', display: 'inline-block', margin: '0 0.7rem'}} />
+                                                                    <div key={i} style={{width: '0.7rem', height: '0.7rem', backgroundColor: i < v.value ? '#FF8C00' : 'white', transform: 'skewX(-10deg)', display: 'inline-block', margin: '0 0.7rem'}} />
                                                                 )
                                                             })}
                                                         </div>
