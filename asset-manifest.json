@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.2bf88632.chunk.css",
-    "main.js": "./static/js/main.d819aaff.chunk.js",
-    "main.js.map": "./static/js/main.d819aaff.chunk.js.map",
+    "main.js": "./static/js/main.1b09902b.chunk.js",
+    "main.js.map": "./static/js/main.1b09902b.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.56b60a81.js",
     "runtime-main.js.map": "./static/js/runtime-main.56b60a81.js.map",
     "static/css/2.12d5e0d6.chunk.css": "./static/css/2.12d5e0d6.chunk.css",
@@ -15,8 +15,9 @@
     "static/media/emclogo.0ea5071c.jpg": "./static/media/emclogo.0ea5071c.jpg",
     "static/media/love.7afa8217.jpg": "./static/media/love.7afa8217.jpg",
     "static/media/madailogo.8f649a4d.jpg": "./static/media/madailogo.8f649a4d.jpg",
-    "static/media/nike case.99254702.pptx": "./static/media/nike case.99254702.pptx",
     "static/media/nike.46df4a67.jpg": "./static/media/nike.46df4a67.jpg",
+    "static/media/tesla case.618dfdc9.pptx": "./static/media/tesla case.618dfdc9.pptx",
+    "static/media/tesla.d9369c22.png": "./static/media/tesla.d9369c22.png",
     "static/media/tuc.6069a6e8.jpg": "./static/media/tuc.6069a6e8.jpg",
     "static/media/usst.dd73b928.jpg": "./static/media/usst.dd73b928.jpg"
   },
@@ -25,6 +26,6 @@
     "static/css/2.12d5e0d6.chunk.css",
     "static/js/2.ad8c6301.chunk.js",
     "static/css/main.2bf88632.chunk.css",
-    "static/js/main.d819aaff.chunk.js"
+    "static/js/main.1b09902b.chunk.js"
   ]
 }
