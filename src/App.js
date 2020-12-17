@@ -40,7 +40,7 @@ function App() {
                                 <p style={{color: 'whiteSmoke', fontSize: '6rem', margin: '0', fontWeight: '200'}}>Hello</p>
                                 <p style={{color: '#aee2d9', fontSize: '1.3rem', margin: '0.5rem', fontWeight: '200'}}>思路天马行空，执着死抠细节，追逐一切美好精致的东西</p>
                                 <p style={{color: 'white', fontSize: '1.5rem', margin: '0.5rem', fontWeight: '300'}}>我是周立桦，也可以叫我哈维</p>
-                                <p style={{color: 'white', fontSize: '1.3rem', margin: '0.5rem', fontWeight: '200'}}>A preStrategy</p>
+                                <p style={{color: 'white', fontSize: '1.3rem', margin: '0.5rem', fontWeight: '200'}}>A preAccountEx</p>
                                 <DownOutlined onClick={() => {fullpageApi.moveSectionDown()}} style={{position: 'absolute', bottom: '2rem', width: '100%', clear: 'both', display: 'block', fontSize: '2rem', color: 'white'}} />
                             </div>
                         </div>
