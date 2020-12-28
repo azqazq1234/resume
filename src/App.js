@@ -10,8 +10,10 @@ import usst from './logo/usst.jpg';
 import tuc from './logo/tuc.jpg';
 import nike from './logo/nike.jpg';
 import tesla from './logo/tesla.png';
+import w from './logo/w.png';
 import love from './logo/love.jpg';
 import teslaPPT from './ducument/tesla case.pptx';
+import wPPT from './ducument/w v3.pdf';
 
 function App() {
     const [count, setCount] = useState();
@@ -104,7 +106,7 @@ function App() {
                         <div className={'section'} style={{backgroundColor: count === 2 ? '#9f3' : 'rgb(20, 20, 20)', transition: '0.5s'}}>
                             <Row style={{height: '60vh'}}>
                                 <Col span={12}>
-                                    <div onClick={() => {window.open(`${teslaPPT}`)}} style={{background: `url(${tesla}) no-repeat center`, backgroundSize: '16rem 16rem',
+                                    <div onClick={() => {window.open(`${wPPT}`)}} style={{background: `url(${w}) no-repeat center`, backgroundSize: '16rem 16rem',
                                         height: '16rem', width: '16rem', border: '0.5rem solid #FF7F50', borderRadius: '5rem', cursor: 'pointer',
                                         position: 'absolute', top: '70%', left: '50%', transform: 'translate(-50%, -70%)'}}
                                     />
@@ -118,8 +120,8 @@ function App() {
                             </Row>
                             <Row style={{height: '10vh'}}>
                                 <Col onClick={() => {window.open(`${teslaPPT}`)}} span={12} style={{cursor: 'pointer'}}>
-                                    <p style={{color: 'white', textAlign: 'center', fontSize: '2rem', margin: '1rem 0', fontWeight: '200'}}>Tesla Case</p>
-                                    <p style={{color: 'white', textAlign: 'center', fontSize: '1.2rem', margin: '1rem 0', fontWeight: '300'}}>一个简单的关于tesla的落地case，点击下载</p>
+                                    <p style={{color: 'white', textAlign: 'center', fontSize: '2rem', margin: '1rem 0', fontWeight: '200'}}>W Case</p>
+                                    <p style={{color: 'white', textAlign: 'center', fontSize: '1.2rem', margin: '1rem 0', fontWeight: '300'}}>一个简单的关于虚构W公司的提案</p>
                                 </Col>
                                 <Col onClick={() => {window.open('https://azqazq1234.github.io/love/')}} span={12} style={{cursor: 'pointer'}}>
                                     <p style={{color: 'white', textAlign: 'center', fontSize: '2rem', margin: '1rem 0', fontWeight: '200'}}>Love Monument</p>
